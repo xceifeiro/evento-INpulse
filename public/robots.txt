@@ -1,0 +1,10 @@
+# Permitir todos os robôs de busca
+User-agent: *
+Allow: /
+
+# Desativar indexação de páginas administrativas
+User-agent: *
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://inpulse.com.br/sitemap.xml
