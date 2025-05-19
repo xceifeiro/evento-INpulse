@@ -2,7 +2,6 @@ import Link from "next/link"
 import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, Calendar, Mail, Phone, Share2 } from "lucide-react"
-import { SharePost } from "@/components/blog/share-post"
 import { AddToCalendar } from "@/components/add-to-calendar"
 
 export const metadata: Metadata = {
@@ -29,7 +28,7 @@ export default function ObrigadoPage() {
   }).format(eventDate)
 
   // URL para compartilhamento
-  const shareUrl = `${process.env.NEXT_PUBLIC_SITE_URL || "https://inpulse.com.br"}`
+  const shareUrl = `https://grupoinpulse.com.br`
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -117,20 +116,6 @@ export default function ObrigadoPage() {
                   </div>
                 </li>
               </ul>
-            </div>
-
-            {/* Compartilhar */}
-            <div className="mb-8 p-4 bg-gray-50 rounded-lg">
-              <h2 className="text-xl font-bold text-[#821423] mb-4 flex items-center gap-2">
-                <Share2 className="h-5 w-5" /> Compartilhe com seus contatos
-              </h2>
-              <p className="text-sm text-gray-600 mb-4">
-                Convide seus amigos e colegas para participar deste evento exclusivo de networking!
-              </p>
-              <SharePost
-                title="Vou participar do INpulse - O maior evento de networking do Centro-Oeste!"
-                url={shareUrl}
-              />
             </div>
 
             {/* Contato */}
